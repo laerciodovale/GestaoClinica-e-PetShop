@@ -1,0 +1,23 @@
+﻿CREATE TABLE [dbo].[JEstqItem] (
+    [ETITEM]   NVARCHAR (20) COLLATE Latin1_General_CI_AS NOT NULL,
+    [MSGRUPO]  SMALLINT      NOT NULL,
+    [MSSUBGRP] SMALLINT      NOT NULL,
+    [MSMIN]    FLOAT (53)    NULL,
+    [MSTIPO]   NVARCHAR (1)  COLLATE Latin1_General_CI_AS NULL,
+    [MSDESC]   NVARCHAR (50) COLLATE Latin1_General_CI_AS NULL,
+    [MSUNID]   NVARCHAR (30) COLLATE Latin1_General_CI_AS NULL,
+    [MSABC]    NVARCHAR (1)  COLLATE Latin1_General_CI_AS NULL,
+    [ETDTREF]  INT           NOT NULL,
+    [ETSOLIC]  INT           NOT NULL,
+    [ETOC]     INT           NOT NULL,
+    [ETQTDE]   FLOAT (53)    NOT NULL,
+    [ETVALOR]  MONEY         NOT NULL,
+    [ETQTDS]   FLOAT (53)    NOT NULL,
+    [ETVLRS]   MONEY         NOT NULL,
+    [ETFORNEC] INT           NOT NULL,
+    [CDESC]    NVARCHAR (30) COLLATE Latin1_General_CI_AS NOT NULL,
+    [ETCCUSTO] SMALLINT      NOT NULL,
+    [ETSETOR]  SMALLINT      NOT NULL,
+    [ETDEPTO]  SMALLINT      NOT NULL
+);
+

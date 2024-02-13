@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>ScriptDataBase</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{9c81549c-65aa-4bd3-bdca-11fcb0d92f53}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>ScriptDataBase</RootNamespace>
+    <AssemblyName>ScriptDataBase</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Views\" />
+    <Folder Include="dbo\Stored Procedures\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\vw_Fin_Ani.sql" />
+    <Build Include="dbo\Tables\TabExtrato.sql" />
+    <Build Include="dbo\Tables\JEstqItem.sql" />
+    <Build Include="dbo\Tables\ImageLibrary.sql" />
+    <Build Include="dbo\Tables\FORNEC.sql" />
+    <Build Include="dbo\Tables\EXTRATO_conv.sql" />
+    <Build Include="dbo\Tables\Consulta.sql" />
+    <Build Include="dbo\Tables\CONREQ.sql" />
+    <Build Include="dbo\Tables\CaixaMovAnt.sql" />
+    <Build Include="dbo\Tables\CaixaMov.sql" />
+    <Build Include="dbo\Tables\Caixa.sql" />
+    <Build Include="dbo\Tables\CadVia.sql" />
+    <Build Include="dbo\Tables\CadVacina.sql" />
+    <Build Include="dbo\Tables\CadUsrSis.sql" />
+    <Build Include="dbo\Tables\CADUSER.sql" />
+    <Build Include="dbo\Tables\CADUNI.sql" />
+    <Build Include="dbo\Tables\CadUF.sql" />
+    <Build Include="dbo\Tables\CADSUBGRU.sql" />
+    <Build Include="dbo\Tables\CadReceita.sql" />
+    <Build Include="dbo\Tables\CadRaca.sql" />
+    <Build Include="dbo\Tables\CadPlVacina.sql" />
+    <Build Include="dbo\Tables\CadPlanoVac.sql" />
+    <Build Include="dbo\Tables\CadPeso.sql" />
+    <Build Include="dbo\Tables\CadPctCompl.sql" />
+    <Build Include="dbo\Tables\CadPadrao.sql" />
+    <Build Include="dbo\Tables\CadNssNro.sql" />
+    <Build Include="dbo\Tables\CadNotas.sql" />
+    <Build Include="dbo\Tables\CadLoteProd.sql" />
+    <Build Include="dbo\Tables\CadLoteNTFSe.sql" />
+    <Build Include="dbo\Tables\CadLoteNtfe.sql" />
+    <Build Include="dbo\Tables\CadItemN.sql" />
+    <Build Include="dbo\Tables\CadItemMYSql.sql" />
+    <Build Include="dbo\Tables\CadItemMS.sql" />
+    <Build Include="dbo\Tables\CadItem.sql" />
+    <Build Include="dbo\Tables\cadIt.sql" />
+    <Build Include="dbo\Tables\CadImagens.sql" />
+    <Build Include="dbo\Tables\CADGRUPO.sql" />
+    <Build Include="dbo\Tables\CadGrpEx.sql" />
+    <Build Include="dbo\Tables\CadFuncxx.sql" />
+    <Build Include="dbo\Tables\CadFuncX.sql" />
+    <Build Include="dbo\Tables\CadFuncOld.sql" />
+    <Build Include="dbo\Tables\CadFuncao.sql" />
+    <Build Include="dbo\Tables\CadFunc.sql" />
+    <Build Include="dbo\Tables\CadFreq.sql" />
+    <Build Include="dbo\Tables\CadFpgto.sql" />
+    <Build Include="dbo\Tables\CadFinS.sql" />
+    <Build Include="dbo\Tables\CadFaCli.sql" />
+    <Build Include="dbo\Tables\CadExame.sql" />
+    <Build Include="dbo\Tables\CadEvento.sql" />
+    <Build Include="dbo\Tables\CADESTOQUE_old.sql" />
+    <Build Include="dbo\Tables\CadEstoque.sql" />
+    <Build Include="dbo\Tables\CadEspecie.sql" />
+    <Build Include="dbo\Tables\CadEmpresaN.sql" />
+    <Build Include="dbo\Tables\CadEmpresa.sql" />
+    <Build Include="dbo\Tables\CademailAniversario.sql" />
+    <Build Include="dbo\Tables\CadDiagnostico.sql" />
+    <Build Include="dbo\Tables\CadDC_Cli.sql" />
+    <Build Include="dbo\Tables\CADCUSTO.sql" />
+    <Build Include="dbo\Tables\CadCtrVacina.sql" />
+    <Build Include="dbo\Tables\CadCtaPg.sql" />
+    <Build Include="dbo\Tables\CadCor.sql" />
+    <Build Include="dbo\Tables\CadConv.sql" />
+    <Build Include="dbo\Tables\CadConsulta.sql" />
+    <Build Include="dbo\Tables\CadConfigemail.sql" />
+    <Build Include="dbo\Tables\CadCliente.sql" />
+    <Build Include="dbo\Tables\CadCidade.sql" />
+    <Build Include="dbo\Tables\CadCategorias.sql" />
+    <Build Include="dbo\Tables\CadCartao.sql" />
+    <Build Include="dbo\Tables\CadBairro.sql" />
+    <Build Include="dbo\Tables\CadAprFicha.sql" />
+    <Build Include="dbo\Tables\CadAnimal.sql" />
+    <Build Include="dbo\Tables\CadAgClinica.sql" />
+    <Build Include="dbo\Tables\ARQPDF.sql" />
+    <Build Include="dbo\Views\WVRESULTADO.sql" />
+    <Build Include="dbo\Views\WFARMACIA.sql" />
+    <Build Include="dbo\Views\VWVACINA.sql" />
+    <Build Include="dbo\Views\vwresultado.sql" />
+    <Build Include="dbo\Views\vwnotasN.sql" />
+    <Build Include="dbo\Views\vwNotas.sql" />
+    <Build Include="dbo\Views\vwitemnft.sql" />
+    <Build Include="dbo\Views\vwInadimplentes.sql" />
+    <Build Include="dbo\Views\VWFINANI.sql" />
+    <Build Include="dbo\Views\VwFechaMes.sql" />
+    <Build Include="dbo\Views\vwfarmacia.sql" />
+    <Build Include="dbo\Views\vwcaixadia.sql" />
+    <Build Include="dbo\Views\vw_Vacinas_do_Mes.sql" />
+    <Build Include="dbo\Views\View_1.sql" />
+    <Build Include="dbo\Views\JSaldoEstq.sql" />
+    <Build Include="dbo\Views\JESTQITEM2.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Vacinas_do_Mes.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Vacina_Grupo.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_USER_Up.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_USER_Sel.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_USER_Insert.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_USER_Del.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_SelDtNasCli_Id.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Resumo_De_Vendas_PorMes.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Receita_Sel.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Receita_NssNro.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Receita_Lk.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Receita_Insert.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Receita_Del_Reg.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Receita_Ani.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Ntfse_Total.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Ntfse_Itens_FaCli.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_NssNro_Max.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_NssNro_Insert.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Notas_NaoEnviadas.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Notas_Nao_Enviadas.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Nota_Up_Finan_N.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Nota_Up_Finan.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_LoteNFSe_Insert.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Lote_Insert.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Lista_Finan_Sint_Analitic.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Itens_Like.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Itens_DoGrupo.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Grupo_Sel.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Funcionario_Sel.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Func_UpDate.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Func_Up_Foto.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Func_Sel_CPF.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Func_Sel.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Func_Insert.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_FPgto_Sel.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_FPAGTO.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Fornecedor_UpDate.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Fornecedor_SelTodos.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Fornecedor_Sel.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Fornecedor_Insert.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_FinS_NssNro.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_FinS_Insert.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_FinS_Estorno.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_FinS_Delete.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_FinS_Caixa.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_FinS_BaixaN.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_FinS_Baixa.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_FinA_Vacina.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_FinA_UpLista.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_FinA_NssNro.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_FinA_LeLista.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_FinA_Insert.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_FinA_Det.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_FinA_DeletaItemDaLista.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Estoque_Sum.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Estoque_Sel_ITEM.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Estoque_Sel_ID.sql" />
+    <Build Include="dbo\Stored Procedures\SP_Estoque_Insert.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Estoque_BuscaNTF.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Empresa_Sel.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Email_Aniversario_Lancado.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Email_Aniversario_Insert.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Convenio_Sel.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Consulta_Sel_Id.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Consulta_Sel_An.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Consulta_Insert.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_ConfigEmail_Sel.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Cliente_Up_Foto.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Cliente_Up.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Cliente_Tel.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Cliente_SelDtNas.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Cliente_Sel.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Cliente_Nome.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Cliente_Lk.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Cliente_Insert.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Cliente_End_Bairro.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Cliente_DiaNas.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Cliente_Del.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Cliente_CPF.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Cliente_Bairro.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Cliente.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Caixa_Sld.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Caixa_Insert.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Caixa_Extorno.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Caixa_Del.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Aniversario_Lancado.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Aniversario_Insert.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Animal_Up_Foto.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Animal_Up.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Animal_Top_Sel.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Animal_Sel.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Animal_Raca.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Animal_Nome.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Animal_Lk.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Animal_Insert.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Animal_FinA.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Animal_DiaNas.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Animal_Del.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Animal_Cor.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Agenda_UpDate.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Agenda_Tp.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Agenda_Sel.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Agenda_Insert.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Agenda_Del_t.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_Agenda_Del.sql" />
+    <Build Include="dbo\Stored Procedures\Procedure_Name, sysname, Sp_Uf_Sel.sql" />
+    <Build Include="dbo\Stored Procedures\Procedure_Name, sysname, Sp_Funcao_Sel.sql" />
+  </ItemGroup>
+</Project>

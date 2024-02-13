@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[CadPctCompl] (
+    [PCTid]   INT             NOT NULL,
+    [PCTITEM] NVARCHAR (20)   COLLATE Latin1_General_CI_AS NOT NULL,
+    [PCVALOR] NUMERIC (12, 2) NULL,
+    CONSTRAINT [PK_CadPacote] PRIMARY KEY CLUSTERED ([PCTid] ASC, [PCTITEM] ASC)
+);
+

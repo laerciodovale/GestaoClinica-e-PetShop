@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[CONREQ] (
+    [SQREG]  SMALLINT      NOT NULL,
+    [SQNRO]  INT           NOT NULL,
+    [SQNOME] NVARCHAR (20) NOT NULL
+);
+

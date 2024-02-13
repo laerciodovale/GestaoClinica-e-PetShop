@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[CadNssNro] (
+    [IdNss] DECIMAL (18) IDENTITY (1, 1) NOT NULL,
+    [IdDt]  DATETIME     NULL,
+    CONSTRAINT [PK_CadNssNro] PRIMARY KEY CLUSTERED ([IdNss] ASC)
+);
+

@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[CADCUSTO] (
+    [CCUSTO] SMALLINT      NOT NULL,
+    [CDESC]  NVARCHAR (30) COLLATE Latin1_General_CI_AS NOT NULL,
+    [CPRO]   DECIMAL (18)  NULL
+);
+

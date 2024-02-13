@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[CADSUBGRU] (
+    [SGRGRUPO]  INT           NOT NULL,
+    [SGRSUBGRP] INT           NOT NULL,
+    [SGRDESC]   NVARCHAR (40) COLLATE Latin1_General_CI_AS NOT NULL
+);
+

@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CadVetDataSet" targetNamespace="http://tempuri.org/CadVetDataSet1.xsd" xmlns:mstns="http://tempuri.org/CadVetDataSet1.xsd" xmlns="http://tempuri.org/CadVetDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="Connect_SisVet" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Connect_SisVet (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Cadastros.My.MySettings.GlobalReference.Default.Connect_SisVet" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vw_RelReceitaTableAdapter" GeneratorDataComponentClassName="vw_RelReceitaTableAdapter" Name="vw_RelReceita" UserDataComponentName="vw_RelReceitaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Connect_SisVet (MySettings)" DbObjectName="CadVet.dbo.vw_RelReceita" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT RcNss, RcReco, RcDescFarmaco, AniNome, AniRaca, ClNome, ClCpf FROM dbo.vw_RelReceita</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="RcNss" DataSetColumn="RcNss" />
+              <Mapping SourceColumn="RcReco" DataSetColumn="RcReco" />
+              <Mapping SourceColumn="RcDescFarmaco" DataSetColumn="RcDescFarmaco" />
+              <Mapping SourceColumn="AniNome" DataSetColumn="AniNome" />
+              <Mapping SourceColumn="AniRaca" DataSetColumn="AniRaca" />
+              <Mapping SourceColumn="ClNome" DataSetColumn="ClNome" />
+              <Mapping SourceColumn="ClCpf" DataSetColumn="ClCpf" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="CadVetDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="CadVetDataSet" msprop:Generator_UserDSName="CadVetDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vw_RelReceita" msprop:Generator_TableClassName="vw_RelReceitaDataTable" msprop:Generator_TableVarName="tablevw_RelReceita" msprop:Generator_TablePropName="vw_RelReceita" msprop:Generator_RowDeletingName="vw_RelReceitaRowDeleting" msprop:Generator_RowChangingName="vw_RelReceitaRowChanging" msprop:Generator_RowEvHandlerName="vw_RelReceitaRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_RelReceitaRowDeleted" msprop:Generator_UserTableName="vw_RelReceita" msprop:Generator_RowChangedName="vw_RelReceitaRowChanged" msprop:Generator_RowEvArgName="vw_RelReceitaRowChangeEvent" msprop:Generator_RowClassName="vw_RelReceitaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="RcNss" msprop:Generator_ColumnVarNameInTable="columnRcNss" msprop:Generator_ColumnPropNameInRow="RcNss" msprop:Generator_ColumnPropNameInTable="RcNssColumn" msprop:Generator_UserColumnName="RcNss" type="xs:int" />
+              <xs:element name="RcReco" msprop:Generator_ColumnVarNameInTable="columnRcReco" msprop:Generator_ColumnPropNameInRow="RcReco" msprop:Generator_ColumnPropNameInTable="RcRecoColumn" msprop:Generator_UserColumnName="RcReco">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RcDescFarmaco" msprop:Generator_ColumnVarNameInTable="columnRcDescFarmaco" msprop:Generator_ColumnPropNameInRow="RcDescFarmaco" msprop:Generator_ColumnPropNameInTable="RcDescFarmacoColumn" msprop:Generator_UserColumnName="RcDescFarmaco">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AniNome" msprop:Generator_ColumnVarNameInTable="columnAniNome" msprop:Generator_ColumnPropNameInRow="AniNome" msprop:Generator_ColumnPropNameInTable="AniNomeColumn" msprop:Generator_UserColumnName="AniNome" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AniRaca" msprop:Generator_ColumnVarNameInTable="columnAniRaca" msprop:Generator_ColumnPropNameInRow="AniRaca" msprop:Generator_ColumnPropNameInTable="AniRacaColumn" msprop:Generator_UserColumnName="AniRaca" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ClNome" msprop:Generator_ColumnVarNameInTable="columnClNome" msprop:Generator_ColumnPropNameInRow="ClNome" msprop:Generator_ColumnPropNameInTable="ClNomeColumn" msprop:Generator_UserColumnName="ClNome" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ClCpf" msprop:Generator_ColumnVarNameInTable="columnClCpf" msprop:Generator_ColumnPropNameInRow="ClCpf" msprop:Generator_ColumnPropNameInTable="ClCpfColumn" msprop:Generator_UserColumnName="ClCpf" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

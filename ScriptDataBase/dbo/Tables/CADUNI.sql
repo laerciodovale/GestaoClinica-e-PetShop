@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[CADUNI] (
+    [UNUND]  NVARCHAR (3)  COLLATE Latin1_General_CI_AS NOT NULL,
+    [UNDESC] NVARCHAR (30) COLLATE Latin1_General_CI_AS NOT NULL
+);
+
